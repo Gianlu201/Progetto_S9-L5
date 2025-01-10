@@ -66,7 +66,13 @@ class Main extends Component {
         </div>
 
         <h4>Trending Now</h4>
-        <FilmsList />
+        <FilmsList query='Star Wars' />
+
+        <h4>Watch it Again</h4>
+        <FilmsList query='Fast and Furious' />
+
+        <h4>New Releases</h4>
+        <FilmsList query='Harry Potter' />
       </Container>
     );
   }

@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 class MyFooter extends Component {
   render() {
     return (
-      <footer>
+      <footer className='container-fluid pb-4'>
         <Row className='justify-content-center mt-5'>
           <Col className='col-6'>
             <Row>

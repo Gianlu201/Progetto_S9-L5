@@ -9,7 +9,6 @@ class MyNavbar extends Component {
       <Navbar
         collapseOnSelect
         expand='lg'
-        className='bg-dark'
         data-bs-theme='dark'
         style={{ backgroundColor: '#221f1f' }}
       >
