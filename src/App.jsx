@@ -7,7 +7,7 @@ import MyFooter from './components/MyFooter';
 function App() {
   return (
     <>
-      <div>
+      <div className='d-flex flex-column' style={{ minHeight: '100vh' }}>
         <MyNavbar />
         <Main />
         <MyFooter />

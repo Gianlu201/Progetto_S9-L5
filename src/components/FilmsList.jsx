@@ -15,7 +15,7 @@ class FilmsList extends Component {
       const response = await fetch(URL + this.props.query);
       if (response.ok) {
         const data = await response.json();
-        this.setState({ filmList: data.Search });
+        this.setState({ filmList: data.Search, isLoading: false });
       } else {
         throw new Error("Errore nella lettura dell'API");
       }
@@ -30,21 +30,27 @@ class FilmsList extends Component {
 
   render() {
     return (
-      <Row className='filmList mb-4'>
-        {this.state.filmList.map((film, i) => {
-          if (i < 6) {
-            return (
-              <div key={film.imdbID} className='singleFilm mb-2 px-1'>
-                <img
-                  src={film.Poster}
-                  alt={film.Title}
-                  className='filmPoster'
-                />
-              </div>
-            );
-          }
-        })}
-      </Row>
+      <>
+        {this.props.isLoaded && <h4>{this.props.title}</h4>}
+
+        {this.props.isLoaded && (
+          <Row className='filmList mb-4'>
+            {this.state.filmList.map((film, i) => {
+              if (i < 6) {
+                return (
+                  <div key={film.imdbID} className='singleFilm mb-2 px-1'>
+                    <img
+                      src={film.Poster}
+                      alt={film.Title}
+                      className='filmPoster'
+                    />
+                  </div>
+                );
+              }
+            })}
+          </Row>
+        )}
+      </>
     );
   }
 }

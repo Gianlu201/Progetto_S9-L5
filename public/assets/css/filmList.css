@@ -1,7 +1,6 @@
 .singleFilm {
   width: calc(100% / 6);
   height: 300px;
-  overflow: hidden;
 }
 
 .filmPoster {
@@ -9,4 +8,9 @@
   margin: 0 auto;
   height: 100%;
   max-width: 190px;
+  cursor: pointer;
+}
+
+.filmPoster:hover {
+  transform: scale(1.2, 1.2);
 }

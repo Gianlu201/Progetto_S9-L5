@@ -26,6 +26,10 @@ footer {
   font-size: 90%;
 }
 
+.spinnerBox {
+  margin-top: 25vh;
+}
+
 #kids {
   color: #f5f5f1;
   font-size: 0.8em;
