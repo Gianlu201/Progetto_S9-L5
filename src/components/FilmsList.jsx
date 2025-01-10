@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 import '../../public/assets/css/filmList.css';
 
@@ -38,13 +38,19 @@ class FilmsList extends Component {
             {this.state.filmList.map((film, i) => {
               if (i < 6) {
                 return (
-                  <div key={film.imdbID} className='singleFilm mb-2 px-1'>
+                  <Col
+                    sm={6}
+                    lg={3}
+                    xl={2}
+                    key={film.imdbID}
+                    className='singleFilm mb-2 px-1'
+                  >
                     <img
                       src={film.Poster}
                       alt={film.Title}
                       className='filmPoster'
                     />
-                  </div>
+                  </Col>
                 );
               }
             })}
