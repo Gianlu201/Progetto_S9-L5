@@ -82,3 +82,13 @@ footer {
   cursor: pointer;
   opacity: 0.8;
 }
+
+.formSection {
+  border-bottom: 1px solid gray;
+  padding-bottom: 16px;
+}
+
+.myCheckbox {
+  width: 15px;
+  height: 15px;
+}

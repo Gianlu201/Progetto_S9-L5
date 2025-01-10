@@ -18,16 +18,13 @@ class AccountContent extends Component {
   render() {
     return (
       <>
-        <Container
-          fluid
-          className='d-flex flex-column align-items-center border border-2 border-info'
-        >
+        <Container fluid className='d-flex flex-column align-items-center'>
           <h1 className='text-center text-white'>Edit Profile</h1>
-          <Row className='border border-2 border-warning w-75'>
+          <Row className='w-75'>
             <Col
               xs={12}
               lg={4}
-              className='d-flex justify-content-center align-items-start border border-3 border-danger'
+              className='d-flex justify-content-center align-items-start mb-4'
             >
               <div className='position-relative'>
                 <img
@@ -41,9 +38,9 @@ class AccountContent extends Component {
               </div>
             </Col>
 
-            <Col xs={12} lg={8}>
+            <Col xs={12} lg={8} className='mb-5'>
               <Form style={{ width: 'fit-content' }}>
-                <FormGroup>
+                <FormGroup className='mt-2'>
                   <Form.Control
                     type='text'
                     value={this.state.accountName}
@@ -55,8 +52,9 @@ class AccountContent extends Component {
                     style={{ width: '250px' }}
                   ></Form.Control>
                 </FormGroup>
-                <FormGroup style={{ borderBottom: '1px solid gray' }}>
-                  <h4 className='text-secondary fs-4'>Language</h4>
+
+                <FormGroup className='formSection my-3'>
+                  <h4 className='text-secondary fs-3 mb-3'>Language:</h4>
                   <Form.Select
                     className='text-white bg-dark rounded-0'
                     style={{ width: 'fit-content' }}
@@ -66,15 +64,18 @@ class AccountContent extends Component {
                     <option>Espanol</option>
                   </Form.Select>
                 </FormGroup>
-                <FormGroup style={{ borderBottom: '1px solid gray' }}>
-                  <h4 className='text-secondary fs-4'>Maturity Settings:</h4>
+
+                <FormGroup className='formSection my-3'>
+                  <h4 className='text-secondary fs-3 mb-3'>
+                    Maturity Settings:
+                  </h4>
                   <span
                     className='d-block p-2 px-3 bg-secondary text-white'
                     style={{ width: 'fit-content' }}
                   >
                     ALL MATURITY SETTINGS
                   </span>
-                  <FormText className='text-white'>
+                  <FormText className='text-white fs-6 d-inline-block my-3'>
                     Show files for all maturity settings for this profile.
                   </FormText>
                   <Button
@@ -84,29 +85,43 @@ class AccountContent extends Component {
                     EDIT
                   </Button>
                 </FormGroup>
-                <FormGroup style={{ borderBottom: '1px solid gray' }}>
-                  <h4 className='text-secondary fs-4'>Maturity Settings:</h4>
-                  <div>
-                    <input type='checkbox' />
-                    <label className='text-white'>
+
+                <FormGroup className='formSection'>
+                  <h4 className='text-secondary fs-3'>Maturity Settings:</h4>
+                  <div className='d-flex align-items-center my-2'>
+                    <input type='checkbox' className='myCheckbox' />
+                    <label className='text-white lead ms-2'>
                       Autoplay next episode in a series on all device
                     </label>
                   </div>
-                  <div>
-                    <input type='checkbox' />
-                    <label className='text-white'>
+                  <div className='d-flex align-items-center my-2'>
+                    <input type='checkbox' className='myCheckbox' />
+                    <label className='text-white lead ms-2'>
                       Autoplay next episode in a series on all device
                     </label>
                   </div>
                 </FormGroup>
-                <div>
-                  <Button variant='light' className='fw-bold fs-5 me-2'>
+
+                <div className='mt-3'>
+                  <Button
+                    type='button'
+                    variant='light'
+                    className='fw-bold fs-5 me-2 mb-3'
+                  >
                     SAVE
                   </Button>
-                  <Button variant='outline-secondary' className='fs-5 me-2'>
+                  <Button
+                    type='button'
+                    variant='outline-secondary'
+                    className='fs-5 me-2 mb-3'
+                  >
                     CANCEL
                   </Button>
-                  <Button variant='outline-secondary' className='fs-5'>
+                  <Button
+                    type='button'
+                    variant='outline-secondary'
+                    className='fs-5 mb-3'
+                  >
                     DELETE PROFILE
                   </Button>
                 </div>
