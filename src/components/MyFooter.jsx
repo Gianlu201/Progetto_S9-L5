@@ -1,24 +1,27 @@
 import { Component } from 'react';
 import { Facebook, Instagram, TwitterX, Youtube } from 'react-bootstrap-icons';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 class MyFooter extends Component {
   render() {
     return (
       <footer>
-        <div className='row justify-content-center mt-5'>
-          <div className='col col-6'>
-            <div className='row'>
-              <div className='col mb-2'>
+        <Row className='justify-content-center mt-5'>
+          <Col className='col-6'>
+            <Row>
+              <Col className='mb-2'>
                 <Facebook className='footer-icon me-2'></Facebook>
                 <Instagram className='footer-icon me-2'></Instagram>
                 <TwitterX className='footer-icon me-2'></TwitterX>
                 <Youtube className='footer-icon'></Youtube>
-              </div>
-            </div>
-            <div className='row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg 4'>
-              <div className='col'>
-                <div className='row'>
-                  <div className='col footer-links'>
+              </Col>
+            </Row>
+            <Row xs={1} sm={2} md={4}>
+              <Col>
+                <Row>
+                  <Col className='footer-links'>
                     <p>
                       <a href='#' alt='footer link'>
                         Audio and Subtitles
@@ -39,12 +42,12 @@ class MyFooter extends Component {
                         Contact us
                       </a>
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className='col'>
-                <div className='row'>
-                  <div className='col footer-links'>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <Row>
+                  <Col className='footer-links'>
                     <p>
                       <a href='#' alt='footer link'>
                         Audio Description
@@ -60,12 +63,12 @@ class MyFooter extends Component {
                         Legal Notices
                       </a>
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className='col'>
-                <div className='row'>
-                  <div className='col footer-links'>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <Row>
+                  <Col className='footer-links'>
                     <p>
                       <a href='#' alt='footer link'>
                         Help Center
@@ -81,12 +84,12 @@ class MyFooter extends Component {
                         Cookie Preferences
                       </a>
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className='col'>
-                <div className='row'>
-                  <div className='col footer-links'>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <Row>
+                  <Col className='footer-links'>
                     <p>
                       <a href='#' alt='footer link'>
                         Gift Cards
@@ -102,27 +105,29 @@ class MyFooter extends Component {
                         Corporate Information
                       </a>
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='row'>
-              <div className='col mb-2'>
-                <button
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+            <Row>
+              <Col className='mb-2'>
+                <Button
                   type='button'
-                  className='btn btn-sm footer-button rounded-0 mt-3'
+                  variant='outline-secondary'
+                  size='sm'
+                  className='footer-button rounded-0 mt-3'
                 >
                   Service Code
-                </button>
-              </div>
-            </div>
-            <div className='row'>
-              <div className='col mb-2 mt-2 copyright'>
+                </Button>
+              </Col>
+            </Row>
+            <Row>
+              <Col className='mb-2 mt-2 copyright'>
                 © 1997-2023 Netflix, Inc.
-              </div>
-            </div>
-          </div>
-        </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
       </footer>
     );
   }
