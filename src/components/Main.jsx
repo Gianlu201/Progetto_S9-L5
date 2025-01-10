@@ -39,7 +39,7 @@ class Main extends Component {
                     id='dropdown-basic'
                     style={{ backgroundColor: '#221f1f' }}
                   >
-                    Genres
+                    Genres&nbsp;
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
