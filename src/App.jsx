@@ -1,17 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../public/assets/css/app.css';
 
-import HomePage from './components/Homepage';
-// import SettingsPage from './components/SettingsPage';
+// import HomePage from './components/Homepage';
 // import AccountPage from './components/AccountPage';
+import SettingsPage from './components/SettingsPage';
 
 function App() {
   return (
     <>
       <div className='d-flex flex-column' style={{ minHeight: '100vh' }}>
-        <HomePage />
+        {/* <HomePage /> */}
         {/* <AccountPage /> */}
-        {/* <SettingsPage /> */}
+        <SettingsPage />
       </div>
     </>
   );

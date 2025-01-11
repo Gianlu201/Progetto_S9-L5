@@ -92,3 +92,19 @@ footer {
   width: 15px;
   height: 15px;
 }
+
+/* Settings Page */
+.paypal-logo {
+  width: 20%;
+  min-width: 70px;
+  max-width: 80px;
+  height: 20px;
+  background-image: url('../images/paypal.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.classicLink {
+  cursor: pointer;
+}
