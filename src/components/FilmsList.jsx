@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Alert } from 'react-bootstrap';
 
 import '../../public/assets/css/filmList.css';
 
@@ -8,7 +8,14 @@ const URL = 'http://www.omdbapi.com/?apikey=d2993ad1&s=';
 class FilmsList extends Component {
   state = {
     filmList: [],
+    errorMessage: '',
   };
+
+  errorBlock = (
+    <Alert variant='danger' dismissible>
+      <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+    </Alert>
+  );
 
   getFilmList = async () => {
     try {
@@ -20,7 +27,7 @@ class FilmsList extends Component {
         throw new Error("Errore nella lettura dell'API");
       }
     } catch (error) {
-      console.log(error);
+      this.setState({ errorMessage: error });
     }
   };
 
@@ -31,9 +38,11 @@ class FilmsList extends Component {
   render() {
     return (
       <>
-        {this.props.isLoaded && <h4>{this.props.title}</h4>}
+        {this.props.isLoaded && this.state.errorMessage === '' && (
+          <h4>{this.props.title}</h4>
+        )}
 
-        {this.props.isLoaded && (
+        {this.props.isLoaded && this.state.errorMessage === '' && (
           <Row className='filmList mb-4'>
             {this.state.filmList.map((film, i) => {
               if (i < 6) {
@@ -56,6 +65,10 @@ class FilmsList extends Component {
             })}
           </Row>
         )}
+
+        {this.props.isLoaded &&
+          this.state.errorMessage != '' &&
+          this.errorBlock}
       </>
     );
   }
