@@ -26,7 +26,7 @@ class AccountContent extends Component {
               lg={4}
               className='d-flex justify-content-center align-items-start mb-4'
             >
-              <div className='position-relative'>
+              <div className='position-relative w-100'>
                 <img
                   src='https://placedog.net/500'
                   className='rounded-3'
@@ -89,14 +89,28 @@ class AccountContent extends Component {
                 <FormGroup className='formSection'>
                   <h4 className='text-secondary fs-3'>Maturity Settings:</h4>
                   <div className='d-flex align-items-center my-2'>
-                    <input type='checkbox' className='myCheckbox' />
-                    <label className='text-white lead ms-2'>
+                    <input
+                      type='checkbox'
+                      className='myCheckbox'
+                      id='checkboxOne'
+                    />
+                    <label
+                      className='text-white lead ms-2'
+                      htmlFor='checkboxOne'
+                    >
                       Autoplay next episode in a series on all device
                     </label>
                   </div>
                   <div className='d-flex align-items-center my-2'>
-                    <input type='checkbox' className='myCheckbox' />
-                    <label className='text-white lead ms-2'>
+                    <input
+                      type='checkbox'
+                      className='myCheckbox'
+                      id='checkboxTwo'
+                    />
+                    <label
+                      className='text-white lead ms-2'
+                      htmlFor='checkboxTwo'
+                    >
                       Autoplay next episode in a series on all device
                     </label>
                   </div>
