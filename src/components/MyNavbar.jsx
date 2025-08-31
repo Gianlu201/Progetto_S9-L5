@@ -14,11 +14,13 @@ class MyNavbar extends Component {
         style={{ backgroundColor: '#221f1f' }}
       >
         <div className='container-fluid'>
-          <Navbar.Brand href='#'>
-            <img
-              src='../../public/assets/images/logo.png'
-              style={{ width: '100px', height: '55px' }}
-            />
+          <Navbar.Brand>
+            <Link to={'/'}>
+              <img
+                src='../../public/assets/images/logo.png'
+                style={{ width: '100px', height: '55px' }}
+              />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbarScroll' />
           <Navbar.Collapse id='navbarSupportedContent'>
