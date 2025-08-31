@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Search, Bell, PersonCircle } from 'react-bootstrap-icons';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 // import Button from 'react-bootstrap/Button';
 
 class MyNavbar extends Component {
@@ -23,9 +24,9 @@ class MyNavbar extends Component {
           <Navbar.Collapse id='navbarSupportedContent'>
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
               <li className='nav-item'>
-                <a className='nav-link active fw-bold' href='#'>
+                <Link to={'/'} className='nav-link active fw-bold'>
                   Home
-                </a>
+                </Link>
               </li>
               <li className='nav-item'>
                 <a className='nav-link fw-bold' href='#'>
@@ -54,7 +55,9 @@ class MyNavbar extends Component {
                 KIDS
               </div>
               <Bell className='icons'></Bell>
-              <PersonCircle className='icons'></PersonCircle>
+              <Link to={'/profile'}>
+                <PersonCircle className='icons'></PersonCircle>
+              </Link>
             </div>
           </Navbar.Collapse>
         </div>
