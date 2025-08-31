@@ -9,11 +9,6 @@ Questa applicazione riproduce la UI di un catalogo video in stile Netflix: homep
 
 ---
 
-## Descrizione
-La demo è disponibile al seguente ![link]()!
-
----
-
 ## Caratteristiche
 - Interfaccia grafica tipo Netflix (hero, righe di film, card con poster).
 - Ricerca film tramite barra di ricerca che interroga OMDb per titolo.
