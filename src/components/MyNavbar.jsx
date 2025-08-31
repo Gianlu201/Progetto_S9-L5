@@ -17,7 +17,7 @@ class MyNavbar extends Component {
           <Navbar.Brand>
             <Link to={'/'}>
               <img
-                src='../../public/assets/images/logo.png'
+                src='/assets/images/logo.png'
                 style={{ width: '100px', height: '55px' }}
               />
             </Link>
