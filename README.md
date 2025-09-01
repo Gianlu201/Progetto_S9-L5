@@ -1,6 +1,6 @@
-# Netflix Clone
+# EpiFlix
 
-**Netflix Clone** — progetto didattico in React che replica la grafica della piattaforma Netflix e mostra film/movies recuperati dall'API pubblica **OMDb** (Open Movie Database). Il progetto è nato come esercizio iniziale per prendere dimestichezza con React, Vite e con le chiamate a servizi REST esterni.
+**EpiFlix** — progetto didattico in React che si ispira alla grafica della piattaforma Netflix e mostra film/movies recuperati dall'API pubblica **OMDb** (Open Movie Database). Il progetto è nato come esercizio iniziale per prendere dimestichezza con React, Vite e con le chiamate a servizi REST esterni.
 
 ---
 
@@ -10,7 +10,7 @@ Questa applicazione riproduce la UI di un catalogo video in stile Netflix: homep
 ---
 
 ## Caratteristiche
-- Interfaccia grafica tipo Netflix (hero, righe di film, card con poster).
+- Interfaccia grafica in stile Netflix (hero, righe di film, card con poster).
 - Ricerca film tramite barra di ricerca che interroga OMDb per titolo.
 - Pagina/Modal di dettaglio film (titolo, anno, trama, attori, poster, voto IMDB se disponibile).
 - Paginazione/parziale caricamento dei risultati (OMDb ritorna paginato – 10 risultati per pagina).
@@ -57,8 +57,8 @@ README.md
 
 1. Clona la repo:
 ```bash
-git clone https://github.com/Gianlu201/NetflixClone.git
-cd NetflixClone
+git clone https://github.com/Gianlu201/EpiFlix.git
+cd EpiFlix
 ```
 
 2. Installa dipendenze:
